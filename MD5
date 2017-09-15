@@ -7,7 +7,7 @@ ed8178a14789e97ce12174176eed1908 *NAMESPACE
 a6c68bd0f84690aab0887b99db7077e0 *R/R_systat.R
 ea95d085c2d57992edec696c52bc43c9 *R/Sread.R
 fe9264456fd8aa175971d74b69e4d48a *R/arff.R
-920cb1b5ca1d57cba314fe40b848bc3d *R/dbf.R
+03ac78eac2eda515b5c4efa36f3cc65f *R/dbf.R
 b7e7d712506f5c522860a934f332cd43 *R/minitab.R
 be5998494ac5d02d73b8e4c8316aabd2 *R/octave.R
 6bfc3bfc95408ad2c284cce192640b21 *R/read.dta.R
@@ -57,7 +57,7 @@ cc775fef414abb13c72adc4186fc815a *po/foreign.pot
 9bacc9f81136e8e80f5525d365a0d91f *po/fr.po
 56ac3b44221ea0d165a22ec55092e0d7 *po/pl.po
 0fb389f0bcc08d136be6ed07bb64e0ab *src/R_systat.c
-04b7f8e46c15c070c8c3c692fb47174f *src/Rdbfread.c
+681bf88335fbc5797d97fb86c9fbb44b *src/Rdbfread.c
 3f68f084d2debe253f03024d851bc4ed *src/Rdbfwrite.c
 f737aa971c09e183051922a74f68015b *src/SASxport.c
 ebcdf2857b396887f0ea3be29826f97f *src/SASxport.h
@@ -69,7 +69,7 @@ ebcdf2857b396887f0ea3be29826f97f *src/SASxport.h
 4ab523323c1cdd3070b339621b08bb7e *src/foreign.h
 76dc30dd66eb04eb31e109a571048d6c *src/format.c
 ba57918d9812b0751713e905c53c5d46 *src/format.h
-9f9207714c9f77a05ed271202aaafe1a *src/init.c
+a2edd31acdedcf8576432ee39ce0d40d *src/init.c
 7d9abe6ee46aa33f6d397e0c4dd640ad *src/minitab.c
 8dd1d1534ae3a97c0d5e677500bc2460 *src/pfm-read.c
 0b155bb697ace4fd196dd0282a787752 *src/pfm.h
