@@ -16,9 +16,9 @@
 #  A copy of the GNU General Public License is available at
 #  http://www.r-project.org/Licenses/
 
-read.dbf <- function(file, as.is = FALSE)
+read.dbf <- function(file, nrows = 0, as.is = FALSE)
 {
-    df <- .Call(Rdbfread, as.character(path.expand(file)))
+    df <- .Call(Rdbfread, as.character(path.expand(file)), as.integer(nrows))
     onames <- names(df)
     inames <- make.names(onames, unique = TRUE)
     names(df) <- inames

@@ -24,7 +24,7 @@
 
 void spss_init(void);
 
-SEXP Rdbfread(SEXP dbfnm);
+SEXP Rdbfread(SEXP dbfnm, SEXP nrows);
 SEXP DoWritedbf(SEXP file, SEXP df, SEXP pr, SEXP sc, SEXP DataTypes);
 SEXP read_mtp(SEXP fname);
 SEXP readSystat(SEXP file);
@@ -45,7 +45,7 @@ static const R_CMethodDef CEntries[]  = {
 #define CALLDEF(name, n)  {#name, (DL_FUNC) &name, n}
 
 static const R_CallMethodDef CallEntries[] = {
-    CALLDEF(Rdbfread, 1),
+    CALLDEF(Rdbfread, 2),
     CALLDEF(DoWritedbf, 5),
     CALLDEF(read_mtp, 1),
     CALLDEF(readSystat, 1),

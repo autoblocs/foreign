@@ -29,12 +29,13 @@
 #include <Rinternals.h>
 #include "foreign.h"
 
-SEXP Rdbfread(SEXP dbfnm)
+SEXP Rdbfread(SEXP dbfnm, SEXP nrows)
 {
     DBFHandle hDBF;
     int i, iRecord, nflds, nrecs, nRvar, pc=0;
     char labelbuff[81];
     const char *pszFilename = NULL;
+    int rrows;
     int nWidth, nDecimals, val;
     char szTitle[12], buf[2];
     const char *p;
@@ -47,7 +48,7 @@ SEXP Rdbfread(SEXP dbfnm)
 /* -------------------------------------------------------------------- */
 
     pszFilename = CHAR(STRING_ELT(dbfnm, 0));
-
+    rrows = asInteger(nrows);
 
 /* -------------------------------------------------------------------- */
 /*      Open the file.                                                  */
@@ -67,6 +68,7 @@ SEXP Rdbfread(SEXP dbfnm)
     nRvar = 0;
     nflds = DBFGetFieldCount(hDBF);
     nrecs = DBFGetRecordCount(hDBF);
+    if(nrecs > rrows && rrows > 0) nrecs = rrows;
     types = (short *) R_alloc(nflds, sizeof(short));
     PROTECT(DataTypes = allocVector(STRSXP, nflds)); pc++;
     for( i = 0; i < nflds; i++ ) {
